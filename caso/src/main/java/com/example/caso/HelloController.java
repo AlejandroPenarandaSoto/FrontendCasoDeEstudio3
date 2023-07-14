@@ -1,4 +1,4 @@
-package com.example.frontend;
+package com.example.caso;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

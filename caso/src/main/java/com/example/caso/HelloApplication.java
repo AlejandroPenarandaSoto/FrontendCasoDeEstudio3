@@ -1,4 +1,4 @@
-package com.example.frontend;
+package com.example.caso;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

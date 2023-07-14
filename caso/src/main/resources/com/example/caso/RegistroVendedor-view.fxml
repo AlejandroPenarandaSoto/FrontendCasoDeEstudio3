@@ -1,14 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.caso.RegistroVendedorView"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="727.0" prefWidth="1205.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistrarVendedorController">
+    <children>
+        <Button fx:id="btnIngresarNave" layoutX="344.0" layoutY="604.0" prefHeight="43.0" prefWidth="252.0" text="Registrarse">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Text layoutX="262.0" layoutY="79.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro Usuario" textAlignment="CENTER" wrappingWidth="735.287109375">
+            <font>
+                <Font name="Corbel Bold" size="56.0" />
+            </font>
+        </Text>
+        <TextField fx:id="categoriaField" layoutX="630.0" layoutY="135.0" prefHeight="43.0" prefWidth="252.0">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </TextField>
+        <Text fx:id="labelNumero" layoutX="362.0" layoutY="167.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" textAlignment="CENTER" wrappingWidth="252.0">
+            <font>
+                <Font name="Corbel" size="30.0" />
+            </font>
+        </Text>
+        <Button fx:id="btnMenu" layoutX="663.0" layoutY="604.0" prefHeight="43.0" prefWidth="252.0" text="menu">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <TextField fx:id="marcaField" layoutX="630.0" layoutY="198.0" prefHeight="43.0" prefWidth="252.0">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </TextField>
+        <Text fx:id="labelEspacios" layoutX="324.0" layoutY="230.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido 1" textAlignment="CENTER" wrappingWidth="290.0">
+            <font>
+                <Font name="Corbel" size="30.0" />
+            </font>
+        </Text>
+        <TextField fx:id="modeloField" layoutX="630.0" layoutY="265.0" prefHeight="43.0" prefWidth="252.0">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </TextField>
+        <Text fx:id="labelEspacios1" layoutX="324.0" layoutY="297.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido 2" textAlignment="CENTER" wrappingWidth="290.0">
+            <font>
+                <Font name="Corbel" size="30.0" />
+            </font>
+        </Text>
+      <TextField fx:id="categoriaField1" layoutX="630.0" layoutY="334.0" prefHeight="43.0" prefWidth="252.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Text fx:id="labelNumero1" layoutX="362.0" layoutY="366.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" textAlignment="CENTER" wrappingWidth="252.0">
+         <font>
+            <Font name="Corbel" size="30.0" />
+         </font>
+      </Text>
+      <TextField fx:id="marcaField1" layoutX="630.0" layoutY="397.0" prefHeight="43.0" prefWidth="252.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Text fx:id="labelEspacios2" layoutX="324.0" layoutY="429.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefono" textAlignment="CENTER" wrappingWidth="290.0">
+         <font>
+            <Font name="Corbel" size="30.0" />
+         </font>
+      </Text>
+      <TextField fx:id="modeloField1" layoutX="630.0" layoutY="464.0" prefHeight="43.0" prefWidth="252.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Text fx:id="labelEspacios11" layoutX="324.0" layoutY="496.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="IdRol" textAlignment="CENTER" wrappingWidth="290.0">
+         <font>
+            <Font name="Corbel" size="30.0" />
+         </font>
+      </Text>
+    </children>
 </AnchorPane>

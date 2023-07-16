@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="725.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.InicioSesionClienteView">
+   <children>
+       <Text layoutX="223.0" layoutY="113.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Inicio Sesión" textAlignment="CENTER" wrappingWidth="635.0">
+           <font>
+               <Font name="Corbel Bold" size="56.0" />
+           </font>
+       </Text>
+      <Text fx:id="lblNombre" layoutX="261.0" layoutY="220.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" textAlignment="CENTER" wrappingWidth="134.0">
+         <font>
+            <Font name="Corbel" size="30.0" />
+         </font>
+      </Text>
+       <TextField fx:id="nombreField" layoutX="438.0" layoutY="189.0" prefHeight="43.0" prefWidth="420.0">
+           <cursor>
+               <Cursor fx:constant="TEXT" />
+           </cursor>
+       </TextField>
+      <Text fx:id="lblIdRol" layoutX="261.0" layoutY="298.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="ID  Rol" textAlignment="CENTER" wrappingWidth="134.0">
+         <font>
+            <Font name="Corbel" size="30.0" />
+         </font>
+      </Text>
+      <TextField fx:id="idRolField" layoutX="438.0" layoutY="267.0" prefHeight="43.0" prefWidth="420.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+       <Button fx:id="btnIniciarSesion" layoutX="261.0" layoutY="420.0" prefHeight="43.0" prefWidth="252.0" text="Iniciar Sesión">
+           <font>
+               <Font size="17.0" />
+           </font>
+       </Button>
+      <Button fx:id="btnMenu" layoutX="596.0" layoutY="420.0" prefHeight="43.0" prefWidth="252.0" text="Regresar al menú">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

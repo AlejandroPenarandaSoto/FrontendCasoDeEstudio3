@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="461.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.MainViewController">
+
+    <Text layoutX="106.0" layoutY="95.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Cenfo-Amazon" textAlignment="CENTER" wrappingWidth="507.0">
+        <font>
+            <Font name="Corbel Bold" size="56.0" />
+        </font>
+    </Text>
+   <AnchorPane layoutX="66.0" layoutY="137.0" prefHeight="188.0" prefWidth="587.0">
+      <children>
+         <Button layoutX="14.0" layoutY="67.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="186.0" text="Registrarse" />
+         <Button layoutX="387.0" layoutY="67.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="186.0" text="Inicio Sesión" />
+      </children>
+   </AnchorPane>
+
+</AnchorPane>

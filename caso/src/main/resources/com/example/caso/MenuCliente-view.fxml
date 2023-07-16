@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.caso.MenuClienteView"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.MenuClienteController">
+
+    <Text layoutX="106.0" layoutY="95.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Vista Cliente" textAlignment="CENTER" wrappingWidth="507.0">
+        <font>
+            <Font name="Corbel Bold" size="56.0" />
+        </font>
+    </Text>
+    <AnchorPane layoutX="65.0" layoutY="135.0" prefHeight="226.0" prefWidth="587.0">
+      <children>
+         <VBox layoutX="14.0" layoutY="13.0" prefHeight="200.0" prefWidth="219.0">
+            <children>
+               <Button mnemonicParsing="false" text="Registro de Naves">
+                  <VBox.margin>
+                     <Insets left="85.0" />
+                  </VBox.margin></Button>
+               <Button mnemonicParsing="false" text="Inventario Cliente">
+                  <VBox.margin>
+                     <Insets left="85.0" top="100.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+         </VBox>
+         <VBox layoutX="354.0" layoutY="13.0" prefHeight="200.0" prefWidth="219.0">
+            <children>
+               <Button mnemonicParsing="false" text="Inventario Vendedor">
+                  <VBox.margin>
+                     <Insets left="50.0" />
+                  </VBox.margin></Button>
+               <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Cerrar Sesión">
+                  <VBox.margin>
+                     <Insets left="49.0" top="100.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+         </VBox>
+      </children>
+    </AnchorPane>
 
 </AnchorPane>

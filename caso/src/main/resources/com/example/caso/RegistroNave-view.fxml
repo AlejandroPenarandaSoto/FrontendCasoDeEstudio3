@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="945.0" prefWidth="1243.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistrarNaveController">
     <children>
-        <Button fx:id="btnIngresarNave" layoutX="400.0" layoutY="424.0" prefHeight="43.0" prefWidth="252.0" text="Ingresar Nave">
+        <Button fx:id="btnIngresarNave" layoutX="328.0" layoutY="271.0" prefHeight="43.0" prefWidth="252.0" text="Ingresar Nave">
             <font>
                 <Font size="17.0" />
             </font>
@@ -21,102 +21,62 @@
                 <Font name="Corbel Bold" size="56.0" />
             </font>
         </Text>
-        <TextField fx:id="categoriaField" layoutX="344.0" layoutY="126.0" prefHeight="43.0" prefWidth="252.0">
-            <cursor>
-                <Cursor fx:constant="TEXT" />
-            </cursor>
-        </TextField>
-        <Text fx:id="labelNumero" layoutX="76.0" layoutY="158.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria" textAlignment="CENTER" wrappingWidth="252.0">
-            <font>
-                <Font name="Corbel" size="30.0" />
-            </font>
-        </Text>
-        <Button fx:id="btnMenu" layoutX="701.0" layoutY="424.0" prefHeight="43.0" prefWidth="252.0" text="menu">
+        <Button fx:id="btnMenu" layoutX="725.0" layoutY="271.0" prefHeight="43.0" prefWidth="252.0" text="menu">
             <font>
                 <Font size="17.0" />
             </font>
         </Button>
-        <TextField fx:id="marcaField" layoutX="344.0" layoutY="189.0" prefHeight="43.0" prefWidth="252.0">
+        <TextField fx:id="codigoField" layoutX="949.0" layoutY="130.0" prefHeight="43.0" prefWidth="252.0">
             <cursor>
                 <Cursor fx:constant="TEXT" />
             </cursor>
         </TextField>
-        <Text fx:id="labelEspacios" layoutX="38.0" layoutY="221.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca" textAlignment="CENTER" wrappingWidth="290.0">
+        <Text fx:id="labelEspacios2" layoutX="643.0" layoutY="162.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo" textAlignment="CENTER" wrappingWidth="290.0">
             <font>
                 <Font name="Corbel" size="30.0" />
             </font>
         </Text>
-        <TextField fx:id="modeloField" layoutX="344.0" layoutY="256.0" prefHeight="43.0" prefWidth="252.0">
+        <TextField fx:id="ColorField" layoutX="344.0" layoutY="199.0" prefHeight="43.0" prefWidth="252.0">
             <cursor>
                 <Cursor fx:constant="TEXT" />
             </cursor>
         </TextField>
-        <Text fx:id="labelEspacios1" layoutX="38.0" layoutY="288.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Modelo" textAlignment="CENTER" wrappingWidth="290.0">
+        <Text fx:id="labelEspacios12" layoutX="38.0" layoutY="231.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Color" textAlignment="CENTER" wrappingWidth="290.0">
             <font>
                 <Font name="Corbel" size="30.0" />
             </font>
         </Text>
-      <TextField fx:id="motroField" layoutX="344.0" layoutY="327.0" prefHeight="43.0" prefWidth="252.0">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-      </TextField>
-      <Text fx:id="labelEspacios11" layoutX="38.0" layoutY="359.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="motor" textAlignment="CENTER" wrappingWidth="290.0">
-         <font>
-            <Font name="Corbel" size="30.0" />
-         </font>
-      </Text>
-      <TextField fx:id="anioField" layoutX="953.0" layoutY="134.0" prefHeight="43.0" prefWidth="252.0">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-      </TextField>
-      <Text layoutX="685.0" layoutY="166.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Año" textAlignment="CENTER" wrappingWidth="252.0">
-         <font>
-            <Font name="Corbel" size="30.0" />
-         </font>
-      </Text>
-      <TextField fx:id="codigoField" layoutX="953.0" layoutY="197.0" prefHeight="43.0" prefWidth="252.0">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-      </TextField>
-      <Text fx:id="labelEspacios2" layoutX="647.0" layoutY="229.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo" textAlignment="CENTER" wrappingWidth="290.0">
-         <font>
-            <Font name="Corbel" size="30.0" />
-         </font>
-      </Text>
-      <TextField fx:id="ColorField" layoutX="953.0" layoutY="264.0" prefHeight="43.0" prefWidth="252.0">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-      </TextField>
-      <Text fx:id="labelEspacios12" layoutX="647.0" layoutY="296.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Color" textAlignment="CENTER" wrappingWidth="290.0">
-         <font>
-            <Font name="Corbel" size="30.0" />
-         </font>
-      </Text>
-      <TextField fx:id="propulsoresField" layoutX="953.0" layoutY="335.0" prefHeight="43.0" prefWidth="252.0">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-      </TextField>
-      <Text fx:id="labelEspacios111" layoutX="647.0" layoutY="367.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="propulsores" textAlignment="CENTER" wrappingWidth="290.0">
-         <font>
-            <Font name="Corbel" size="30.0" />
-         </font>
-      </Text>
-      <TableView fx:id="tablaNaves" layoutX="334.0" layoutY="498.0" prefHeight="422.0" prefWidth="652.0">
-         <columns>
-            <TableColumn fx:id="categoriaCol" prefWidth="68.0" text="Categoria" />
-            <TableColumn fx:id="marcaCol" prefWidth="90.0" text="Marca" />
-            <TableColumn fx:id="modeloCol" prefWidth="110.0" text="Modelo" />
-            <TableColumn fx:id="motorCol" minWidth="0.0" prefWidth="48.0" text="motor" />
-            <TableColumn fx:id="anioCol" prefWidth="109.0" text="Año" />
-            <TableColumn fx:id="codigoCol" prefWidth="68.0" text="Codigo" />
-            <TableColumn fx:id="colorCol" prefWidth="68.0" text="Color" />
-            <TableColumn fx:id="propulsoresCol" prefWidth="90.0" text="Propulsores" />
-         </columns>
-      </TableView>
+        <TableView fx:id="tablaNaves" layoutX="310.0" layoutY="345.0" prefHeight="422.0" prefWidth="652.0">
+            <columns>
+                <TableColumn fx:id="categoriaCol" prefWidth="68.0" text="Categoria" />
+                <TableColumn fx:id="marcaCol" prefWidth="90.0" text="Marca" />
+                <TableColumn fx:id="modeloCol" prefWidth="110.0" text="Modelo" />
+                <TableColumn fx:id="motorCol" minWidth="0.0" prefWidth="48.0" text="motor" />
+                <TableColumn fx:id="anioCol" prefWidth="109.0" text="Año" />
+                <TableColumn fx:id="codigoCol" prefWidth="68.0" text="Codigo" />
+                <TableColumn fx:id="colorCol" prefWidth="68.0" text="Color" />
+                <TableColumn fx:id="propulsoresCol" prefWidth="90.0" text="Propulsores" />
+            </columns>
+        </TableView>
+        <TextField fx:id="propulsoresField" layoutX="344.0" layoutY="130.0" prefHeight="43.0" prefWidth="252.0">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </TextField>
+        <Text layoutX="38.0" layoutY="159.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="propulsores" textAlignment="CENTER" wrappingWidth="290.0">
+            <font>
+                <Font name="Corbel" size="30.0" />
+            </font>
+        </Text>
+        <TextField fx:id="motorField" layoutX="949.0" layoutY="199.0" prefHeight="43.0" prefWidth="252.0">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </TextField>
+        <Text fx:id="" layoutX="647.0" layoutY="231.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Motor" textAlignment="CENTER" wrappingWidth="290.0">
+            <font>
+                <Font name="Corbel" size="30.0" />
+            </font>
+        </Text>
     </children>
 </AnchorPane>

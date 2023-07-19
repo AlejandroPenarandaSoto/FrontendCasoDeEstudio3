@@ -27,6 +27,5 @@ public class RegistroModeloNaveController {
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.setScene(newPageScene);
         currentStage.show();
-
     }
 }

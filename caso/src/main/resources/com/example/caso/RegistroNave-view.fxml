@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistrarNaveController">
     <children>
-        <Button fx:id="btnIngresarNave" layoutX="707.0" layoutY="333.0" prefHeight="43.0" prefWidth="252.0" text="Ingresar Nave">
+        <Button fx:id="btnIngresarNave" layoutX="707.0" layoutY="333.0" prefHeight="43.0" onAction="#registrarNave" prefWidth="252.0" text="Ingresar Nave">
             <font>
                 <Font size="17.0" />
             </font>

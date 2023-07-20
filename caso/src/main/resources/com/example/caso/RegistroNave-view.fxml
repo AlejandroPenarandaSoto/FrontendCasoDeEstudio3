@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistrarNaveController">
     <children>
-        <Button fx:id="btnIngresarNave" layoutX="707.0" layoutY="333.0" prefHeight="43.0" onAction="#registrarNave" prefWidth="252.0" text="Ingresar Nave">
+        <Button fx:id="btnIngresarNave" layoutX="707.0" layoutY="333.0" onAction="#registrarNave" prefHeight="43.0" prefWidth="252.0" text="Ingresar Nave">
             <font>
                 <Font size="17.0" />
             </font>
@@ -51,9 +51,9 @@
             <columns>
                 <TableColumn fx:id="codigoCol" prefWidth="68.0" text="Codigo" />
                 <TableColumn fx:id="colorCol" prefWidth="90.0" text="Color" />
-                <TableColumn fx:id="catCol" prefWidth="110.0" text="Categoria" />
-                <TableColumn fx:id="marcaMCol" prefWidth="109.0" text="MarcaModelo" />
-                <TableColumn fx:id="nombreCol" prefWidth="124.0" text="nombre Usuario" />
+                <TableColumn fx:id="catCol" prefWidth="110.0" text="id_Categoria" />
+                <TableColumn fx:id="marcaMCol" prefWidth="109.0" text="id_MarcaModelo" />
+                <TableColumn fx:id="nombreCol" prefWidth="124.0" text="id_Usuario" />
             </columns>
         </TableView>
         <Text fx:id="labelEspacios21" layoutX="647.0" layoutY="166.0" stroke="#323030" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria" textAlignment="CENTER" wrappingWidth="290.0">

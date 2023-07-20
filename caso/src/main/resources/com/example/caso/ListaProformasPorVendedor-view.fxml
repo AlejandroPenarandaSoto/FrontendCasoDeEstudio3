@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.ProformasPorVendedorController">
+    <children>
+        <Button fx:id="btnVer" layoutX="449.0" layoutY="505.0" onAction="#verTabla" prefHeight="43.0" prefWidth="252.0" text="Consultar Proformas">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Text layoutX="172.0" layoutY="74.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de proformas por vendedor" textAlignment="CENTER" wrappingWidth="735.287109375">
+            <font>
+                <Font name="Corbel Bold" size="46.0" />
+            </font>
+        </Text>
+        <Button fx:id="btndetalles" layoutX="449.0" layoutY="556.0" prefHeight="43.0" prefWidth="252.0" text="Registro Detalles">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <ComboBox fx:id="comboVendedores" layoutX="449.0" layoutY="453.0" prefHeight="43.0" prefWidth="252.0" promptText="vendedores">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </ComboBox>
+        <TableView fx:id="tablaP" layoutX="390.0" layoutY="107.0" prefHeight="336.0" prefWidth="370.0">
+            <columns>
+                <TableColumn fx:id="proformaCol" prefWidth="108.0" text="id_Proforma" />
+                <TableColumn fx:id="clienteCol" prefWidth="86.0" text="id_Ciente" />
+                <TableColumn fx:id="estadoCol" prefWidth="74.0" text="Estado" />
+                <TableColumn fx:id="vendedorCol" prefWidth="109.0" text="id_vendedor" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnMenu1" layoutX="449.0" layoutY="612.0" prefHeight="43.0" prefWidth="252.0" text="menu">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

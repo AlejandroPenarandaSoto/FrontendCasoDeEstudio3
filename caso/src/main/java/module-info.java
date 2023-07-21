@@ -3,7 +3,7 @@ module com.example.caso {
     requires javafx.fxml;
     requires java.sql;
     requires java.net.http;
-    requires Caso3Back;
+    requires BackendCasoDeEstudio3;
 
 
     opens com.example.caso to javafx.fxml;

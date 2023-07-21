@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistroDetallesProformaController">
+    <children>
+        <Text layoutX="223.0" layoutY="68.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro Detalles" textAlignment="CENTER" wrappingWidth="635.0">
+            <font>
+                <Font name="Corbel Bold" size="56.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

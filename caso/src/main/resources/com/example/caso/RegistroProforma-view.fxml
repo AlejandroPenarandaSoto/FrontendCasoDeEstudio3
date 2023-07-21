@@ -1,86 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="945.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistroProformaView">
+<AnchorPane prefHeight="945.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistroProformaController">
     <children>
         <Text layoutX="223.0" layoutY="68.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Proforma" textAlignment="CENTER" wrappingWidth="635.0">
             <font>
                 <Font name="Corbel Bold" size="56.0" />
             </font>
         </Text>
-        <TableView fx:id="tablaInventarioVendedor" layoutX="172.0" layoutY="129.0" prefHeight="274.0" prefWidth="775.0">
-            <columns>
-                <TableColumn fx:id="tipoCol" prefWidth="68.0" text="Tipo" />
-                <TableColumn fx:id="nombrerCol" prefWidth="90.0" text="Nombre" />
-                <TableColumn fx:id="descCol" prefWidth="110.0" text="Descripción" />
-                <TableColumn fx:id="idCol" minWidth="0.0" prefWidth="48.0" text="Cod ID" />
-                <TableColumn fx:id="categoriaCol" prefWidth="109.0" text="Categoria" />
-                <TableColumn fx:id="marcaCol" prefWidth="68.0" text="Marca" />
-                <TableColumn fx:id="modeloCol" prefWidth="68.0" text="Modelo" />
-                <TableColumn fx:id="precioCol" prefWidth="68.0" text="Precio" />
-                <TableColumn fx:id="anioCol" prefWidth="68.0" text="Annio" />
-            </columns>
-        </TableView>
-        <Text fx:id="lblCodigo" layoutX="172.0" layoutY="455.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Código" textAlignment="CENTER" wrappingWidth="134.0">
+        <Text fx:id="lblCliente" layoutX="269.0" layoutY="283.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente" textAlignment="CENTER" wrappingWidth="134.0">
             <font>
                 <Font name="Corbel" size="24.0" />
             </font>
         </Text>
-        <TextField fx:id="codigoField" layoutX="306.0" layoutY="424.0" prefHeight="43.0" prefWidth="420.0">
-            <cursor>
-                <Cursor fx:constant="TEXT" />
-            </cursor>
-        </TextField>
-        <Button fx:id="btnAnnadir" layoutX="757.0" layoutY="424.0" prefHeight="43.0" prefWidth="190.0" text="Añadir">
+        <ComboBox fx:id="comboCliente" layoutX="451.0" layoutY="253.0" prefHeight="43.0" prefWidth="180.0" />
+        <Button fx:id="btnRegistrarProforma" layoutX="446.0" layoutY="525.0" onAction="#registrarProforma" prefHeight="43.0" prefWidth="190.0" text="Registrar Proforma">
             <font>
                 <Font size="17.0" />
             </font>
         </Button>
-        <TableView fx:id="tablaRegistroProforma" layoutX="109.0" layoutY="501.0" prefHeight="274.0" prefWidth="901.0">
-            <columns>
-                <TableColumn fx:id="idClienteProformaCol" prefWidth="68.0" text="ID Cliente" />
-                <TableColumn fx:id="tipoProformaCol" prefWidth="90.0" text="Tipo" />
-                <TableColumn fx:id="nombreProformaCol" prefWidth="110.0" text="Nombre" />
-                <TableColumn fx:id="descProformaCol" minWidth="0.0" prefWidth="48.0" text="Descripción" />
-                <TableColumn fx:id="idProformaCol" prefWidth="109.0" text="Cod ID" />
-                <TableColumn fx:id="categoriaProformaCol" prefWidth="68.0" text="Categoria" />
-                <TableColumn fx:id="marcaProformaCol" prefWidth="68.0" text="Marca" />
-                <TableColumn fx:id="modeloProformaCol" prefWidth="68.0" text="Modelo" />
-                <TableColumn fx:id="precioProformaCol" prefWidth="68.0" text="Precio" />
-                <TableColumn fx:id="annioProformaCol" prefWidth="68.0" text="Annio" />
-                <TableColumn fx:id="vendedorProformaCol" prefWidth="68.0" text="Vendedor" />
-                <TableColumn fx:id="codigoProformaCol" prefWidth="68.0" text="Cod Proforma" />
-            </columns>
-        </TableView>
-        <Text fx:id="lblVendedor" layoutX="109.0" layoutY="822.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendedor" textAlignment="CENTER" wrappingWidth="105.0">
+        <Text fx:id="lblVendedor" layoutX="269.0" layoutY="363.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendedor" textAlignment="CENTER" wrappingWidth="105.0">
             <font>
                 <Font name="Corbel" size="24.0" />
             </font>
         </Text>
-        <TextField fx:id="vendedorField" layoutX="658.0" layoutY="795.0" prefHeight="43.0" prefWidth="150.0">
-            <cursor>
-                <Cursor fx:constant="TEXT" />
-            </cursor>
-        </TextField>
-        <Text fx:id="lblCodProforma" layoutX="440.0" layoutY="822.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Código de Proforma" textAlignment="CENTER" wrappingWidth="222.0">
-            <font>
-                <Font name="Corbel" size="24.0" />
-            </font>
-        </Text>
-        <TextField fx:id="codProformaField" layoutX="223.0" layoutY="795.0" prefHeight="43.0" prefWidth="203.0">
-            <cursor>
-                <Cursor fx:constant="TEXT" />
-            </cursor>
-        </TextField>
-        <Button fx:id="btnTerminarProforma" layoutX="820.0" layoutY="795.0" prefHeight="43.0" prefWidth="190.0" text="Terminar Proforma">
+        <ComboBox fx:id="comboVendedor" layoutX="451.0" layoutY="336.0" prefHeight="43.0" prefWidth="180.0" />
+        <Button fx:id="btnRegistrarCualqVend" layoutX="446.0" layoutY="451.0" prefHeight="43.0" prefWidth="190.0" text="Cualquier Vendedor">
             <font>
                 <Font size="17.0" />
             </font>

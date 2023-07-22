@@ -27,26 +27,17 @@ public class InicioSesionController {
 
     @FXML
     protected void onBtnInicioSesion(ActionEvent event) throws IOException {
+        String username = txtUser.getText();
+        String pswd = txtPswd.getText();
 
 
-        if (txtUser.getText().equals(appGestor.getUsername(txtUser.getText()))){
 
-            if (appGestor.getUsuarioIdByUser(txtUser.getText()) == 1){
-                Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuCliente-view.fxml"));
-                Scene newPageScene = new Scene(newPageParent);
-                Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                currentStage.setScene(newPageScene);
-                currentStage.show();
-            } else if (appGestor.getUsuarioIdByUser(txtUser.getText()) == 2) {
-                Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuVendedor-view.fxml"));
-                Scene newPageScene = new Scene(newPageParent);
-                Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                currentStage.setScene(newPageScene);
-                currentStage.show();
-            }
+            Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuCliente-view.fxml"));
+            Scene newPageScene = new Scene(newPageParent);
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            currentStage.setScene(newPageScene);
+            currentStage.show();
 
-
-        }else txtError.setText("Usuario o Contrasenna incorrecta!");
-
+        }
     }
-}
+

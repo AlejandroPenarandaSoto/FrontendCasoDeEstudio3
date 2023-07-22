@@ -24,6 +24,8 @@ public class InicioSesionController {
 
 
     private Gestor appGestor = new Gestor();
+    private InventarioClienteController invetarioC = new InventarioClienteController();
+    private MenuClienteController menuClienteController = new MenuClienteController();
 
     @FXML
     protected void onBtnInicioSesion(ActionEvent event) throws IOException {
@@ -31,13 +33,17 @@ public class InicioSesionController {
         String pswd = txtPswd.getText();
 
         if (username.equals(appGestor.getUsername(username)) && pswd.equals(appGestor.getPswd(pswd))){
-            if (appGestor.getIdRolByUsername(username) == 1){
+            if (appGestor.getUsuarioIdByUser(username) == 1){
+                UsuarioGlobal.setNombreUsuario(username);
                 Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuCliente-view.fxml"));
                 Scene newPageScene = new Scene(newPageParent);
                 Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 currentStage.setScene(newPageScene);
                 currentStage.show();
-            } else if (appGestor.getIdRolByUsername(username) == 2) {
+
+
+
+            } else if (appGestor.getUsuarioIdByUser(username) == 2) {
                 Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuVendedor-view.fxml"));
                 Scene newPageScene = new Scene(newPageParent);
                 Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -50,5 +56,12 @@ public class InicioSesionController {
 
 
     }
+
+    public String getUserName() {
+        return txtUser.getText();
     }
+
+
+
+}
 

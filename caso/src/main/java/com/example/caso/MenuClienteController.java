@@ -22,6 +22,8 @@ public class MenuClienteController implements Initializable {
 
     @FXML
     private Text txtCliente;
+    private String userName;
+
 
     @FXML
     protected void onPressbtnRegistroNave(ActionEvent event) throws IOException{
@@ -32,18 +34,30 @@ public class MenuClienteController implements Initializable {
         currentStage.show();
     }
 
+
     @FXML
-    protected void onPressbtnInvCliente(ActionEvent event) throws IOException{
-        Parent newPageParent = FXMLLoader.load(getClass().getResource("InventarioCliente-view.fxml"));
+    protected void onPressbtnInventarioV(ActionEvent event) throws IOException{
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("InventarioVendedor-view.fxml"));
         Scene newPageScene = new Scene(newPageParent);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.setScene(newPageScene);
         currentStage.show();
     }
+    @FXML
+    protected void onPressbtnInvCliente(ActionEvent event) throws IOException{
+
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("InventarioCliente-view.fxml"));
+        Scene newPageScene = new Scene(newPageParent);
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.setScene(newPageScene);
+        currentStage.show();
+
+
+    }
 
     @FXML
-    protected void onPressbtnInvVendedor(ActionEvent event) throws IOException{
-        Parent newPageParent = FXMLLoader.load(getClass().getResource("InventarioVendedor-view.fxml"));
+    protected void onPressbtnProforma(ActionEvent event) throws IOException{
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("ListaProformasPorVendedor-view.fxml"));
         Scene newPageScene = new Scene(newPageParent);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.setScene(newPageScene);

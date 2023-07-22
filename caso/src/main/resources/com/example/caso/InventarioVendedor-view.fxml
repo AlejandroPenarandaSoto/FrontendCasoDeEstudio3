@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="725.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.InventarioVendedorController">
+<AnchorPane prefHeight="725.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.InventarioVendedorController">
     <children>
         <Button fx:id="btnmenu" layoutX="434.0" layoutY="437.0" prefHeight="43.0" prefWidth="252.0" text="menu">
             <font>
@@ -19,17 +19,14 @@
                 <Font name="Corbel Bold" size="56.0" />
             </font>
         </Text>
-        <TableView fx:id="tablaInventarioCliente" layoutX="172.0" layoutY="129.0" prefHeight="274.0" prefWidth="775.0">
+        <TableView fx:id="tablaInventarioCliente" layoutX="284.0" layoutY="122.0" prefHeight="274.0" prefWidth="512.0">
             <columns>
                 <TableColumn fx:id="tipoCol" prefWidth="68.0" text="tipo" />
                 <TableColumn fx:id="nombrerCol" prefWidth="90.0" text="nombre" />
                 <TableColumn fx:id="descCol" prefWidth="110.0" text="descripcion" />
-                <TableColumn fx:id="idCol" minWidth="0.0" prefWidth="48.0" text="id" />
                 <TableColumn fx:id="categoriaCol" prefWidth="109.0" text="Categoria" />
             <TableColumn fx:id="marcaCol" prefWidth="68.0" text="Marca" />
-            <TableColumn fx:id="modeloCol" prefWidth="68.0" text="Modelo" />
             <TableColumn fx:id="precioCol" prefWidth="68.0" text="Precio" />
-            <TableColumn fx:id="anioCol" prefWidth="68.0" text="anio" />
             </columns>
         </TableView>
     </children>

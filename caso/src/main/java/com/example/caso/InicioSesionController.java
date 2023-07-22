@@ -30,14 +30,25 @@ public class InicioSesionController {
         String username = txtUser.getText();
         String pswd = txtPswd.getText();
 
+        if (username.equals(appGestor.getUsername(username)) && pswd.equals(appGestor.getPswd(pswd))){
+            if (appGestor.getIdRolByUsername(username) == 1){
+                Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuCliente-view.fxml"));
+                Scene newPageScene = new Scene(newPageParent);
+                Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                currentStage.setScene(newPageScene);
+                currentStage.show();
+            } else if (appGestor.getIdRolByUsername(username) == 2) {
+                Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuVendedor-view.fxml"));
+                Scene newPageScene = new Scene(newPageParent);
+                Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                currentStage.setScene(newPageScene);
+                currentStage.show();
+
+            }
+
+        }else txtError.setText("Usuario o contrasenna invalidos!");
 
 
-            Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuCliente-view.fxml"));
-            Scene newPageScene = new Scene(newPageParent);
-            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            currentStage.setScene(newPageScene);
-            currentStage.show();
-
-        }
+    }
     }
 

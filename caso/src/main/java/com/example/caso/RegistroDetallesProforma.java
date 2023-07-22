@@ -1,6 +1,7 @@
 package com.example.caso;
 
 import casoestudio.objetos.*;
+import com.google.gson.Gson;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -48,10 +49,10 @@ public class RegistroDetallesProforma implements Initializable {
     private Button ingDetalle;
 
     @FXML
-    private Button ingDetalle1;
+    private Button btnProformasV;
 
     @FXML
-    private Button ingDetalle2;
+    private Button btnRechazo;
 
 
     @FXML
@@ -60,15 +61,23 @@ public class RegistroDetallesProforma implements Initializable {
     @FXML
     private TableColumn<?, ?> tipoCol;
     private ProformaDetalleDAO detalleDAO;
+    private ProformaDAO proforma;
     private RechazoDAO rechazoDAO;
 
     private RepuestoDAO repuestoDAO;
 
 
     @FXML
-    void click(ActionEvent event) {
+    void CLICK(ActionEvent event) {
 
     }
+
+    @FXML
+    void Click(ActionEvent event) {
+
+    }
+
+
 
 
     @Override
@@ -76,6 +85,7 @@ public class RegistroDetallesProforma implements Initializable {
         detalleDAO = new ProformaDetalleDAO();
         rechazoDAO = new RechazoDAO();
         repuestoDAO = new RepuestoDAO();
+        proforma = new ProformaDAO();
 
         List<Rechazo> razonesRechazo = rechazoDAO.getRazonesRechazo();
         for (Rechazo razon : razonesRechazo) {
@@ -87,9 +97,9 @@ public class RegistroDetallesProforma implements Initializable {
         for (Repuesto repuesto : repuestos) {
             CmboRep.getItems().add(String.valueOf(repuesto.getNombre()));
         }
-        List<DetalleProforma> proforma = detalleDAO.getDetallesProf();
-        for (DetalleProforma proformas : proforma) {
-            CmboProf.getItems().add(String.valueOf(proformas.getId_detalle()));
+        List<Proforma> proformas = proforma.getProformas() ;
+        for (Proforma proforma : proformas) {
+            CmboProf.getItems().add(String.valueOf(proforma.getId_Proforma()));
         }
 
 
@@ -97,5 +107,23 @@ public class RegistroDetallesProforma implements Initializable {
         CmboProf.setOnAction(e -> slctProf = Integer.parseInt(CmboProf.getValue()));
         CmboRechz.setOnAction(e -> slctRechz = String.valueOf(CmboRechz.getValue()));
         CmboRep.setOnAction(e -> slctRep = String.valueOf(CmboRep.getValue()));
+    }
+    @FXML
+    void click(ActionEvent event) {
+        int proformaId = Integer.parseInt(CmboProf.getValue());
+        int repuestoId = repuestoDAO.getRepuestoId(CmboRep.getValue());
+        String estado = estadoField.getText();
+        int rechazoId = rechazoDAO.getRechazoId(CmboRechz.getValue());
+        int detalleId = 0;
+
+        // Crear el objeto DetalleProforma
+        DetalleProforma detalleProforma = new DetalleProforma(proformaId, repuestoId, estado, rechazoId, detalleId);
+
+        // Generar el JSON del objeto DetalleProforma usando la librería Gson
+        Gson gson = new Gson();
+        String jsonDetalleProforma = gson.toJson(detalleProforma);
+
+        // Imprimir el JSON generado (opcional, para ver el resultado)
+        System.out.println("JSON del DetalleProforma: " + jsonDetalleProforma);
     }
 }

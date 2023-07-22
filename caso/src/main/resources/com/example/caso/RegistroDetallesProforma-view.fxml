@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="945.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistroDetallesProforma">
+<AnchorPane prefHeight="945.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistroDetallesProforma">
     <children>
         <Text layoutX="119.0" layoutY="82.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Detalles de Proforma" textAlignment="CENTER" wrappingWidth="882.0">
             <font>
@@ -27,12 +32,12 @@
         </TableView>
       <ComboBox id="1" fx:id="CmboRep" layoutX="16.0" layoutY="459.0" prefHeight="56.0" prefWidth="245.0" promptText="Repuestos">
          <cursor>
-            <Cursor fx:constant="CROSSHAIR" />
+            <Cursor fx:constant="DEFAULT" />
          </cursor>
       </ComboBox>
       <ComboBox id="2" fx:id="CmboProf" layoutX="339.0" layoutY="459.0" prefHeight="56.0" prefWidth="177.0" promptText="Proformas">
          <cursor>
-            <Cursor fx:constant="CROSSHAIR" />
+            <Cursor fx:constant="DEFAULT" />
          </cursor>
       </ComboBox>
       <Text layoutX="560.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado" wrappingWidth="93.13671875" />
@@ -40,10 +45,10 @@
       <Button fx:id="ingDetalle" layoutX="480.0" layoutY="611.0" mnemonicParsing="false" onAction="#click" prefHeight="56.0" prefWidth="121.0" text="Ingresar Detalle" />
       <ComboBox id="2" fx:id="CmboRechz" layoutX="820.0" layoutY="460.0" prefHeight="56.0" prefWidth="177.0" promptText="Rechazos">
          <cursor>
-            <Cursor fx:constant="CROSSHAIR" />
+            <Cursor fx:constant="DEFAULT" />
          </cursor>
       </ComboBox>
-      <Button fx:id="ingDetalle1" layoutX="480.0" layoutY="817.0" mnemonicParsing="false" onAction="#click" prefHeight="56.0" prefWidth="121.0" text="Ingresar Detalle" />
-      <Button fx:id="ingDetalle2" layoutX="480.0" layoutY="716.0" mnemonicParsing="false" onAction="#click" prefHeight="56.0" prefWidth="121.0" text="Ingresar Detalle" />
+      <Button fx:id="btnRechazo" layoutX="459.0" layoutY="817.0" mnemonicParsing="false" onAction="#Click" prefHeight="56.0" prefWidth="162.0" text="Registro de Rechazo" />
+      <Button fx:id="btnProformasV" layoutX="448.0" layoutY="717.0" mnemonicParsing="false" onAction="#CLICK" prefHeight="56.0" prefWidth="185.0" text="Proformas por vendedor" />
     </children>
 </AnchorPane>

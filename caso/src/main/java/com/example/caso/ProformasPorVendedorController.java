@@ -9,11 +9,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -63,10 +68,22 @@ public class ProformasPorVendedorController {
         int idUsuario = udao.getUsuariosId(selectedVendedor);
         List<Proforma> proformaList = udao.getProformasByUsuarioId(idUsuario);
         tablaP.setItems(FXCollections.observableArrayList(proformaList));
-        System.out.println("Proforma List: ");
-        for (Proforma proforma : proformaList) {
-            System.out.println(proforma);
-        }
+    }
+    @FXML
+    protected void backMenu(ActionEvent event) throws IOException {
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuVendedor-view.fxml"));
+        Scene newPageScene = new Scene(newPageParent);
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.setScene(newPageScene);
+        currentStage.show();
+    }
+    @FXML
+    protected void detalles(ActionEvent event) throws IOException {
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("RegistroDetallesProforma.fxml"));
+        Scene newPageScene = new Scene(newPageParent);
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.setScene(newPageScene);
+        currentStage.show();
     }
 
 }

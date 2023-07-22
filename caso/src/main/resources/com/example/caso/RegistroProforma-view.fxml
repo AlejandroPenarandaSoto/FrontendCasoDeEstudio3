@@ -6,31 +6,31 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="945.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistroProformaController">
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistroProformaController">
     <children>
-        <Text layoutX="223.0" layoutY="68.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Proforma" textAlignment="CENTER" wrappingWidth="635.0">
+        <Text layoutX="323.0" layoutY="95.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Proforma" textAlignment="CENTER" wrappingWidth="635.0">
             <font>
                 <Font name="Corbel Bold" size="56.0" />
             </font>
         </Text>
-        <Text fx:id="lblCliente" layoutX="269.0" layoutY="283.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente" textAlignment="CENTER" wrappingWidth="134.0">
+        <Text fx:id="lblCliente" layoutX="399.0" layoutY="247.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente" textAlignment="CENTER" wrappingWidth="134.0">
             <font>
                 <Font name="Corbel" size="24.0" />
             </font>
         </Text>
-        <ComboBox fx:id="comboCliente" layoutX="451.0" layoutY="253.0" prefHeight="43.0" prefWidth="180.0" />
-        <Button fx:id="btnRegistrarProforma" layoutX="446.0" layoutY="525.0" onAction="#registrarProforma" prefHeight="43.0" prefWidth="190.0" text="Registrar Proforma">
+        <ComboBox fx:id="comboCliente" layoutX="581.0" layoutY="217.0" prefHeight="43.0" prefWidth="180.0" />
+        <Button fx:id="btnRegistrarProforma" layoutX="576.0" layoutY="489.0" onAction="#registrarProforma" prefHeight="43.0" prefWidth="190.0" text="Registrar Proforma">
             <font>
                 <Font size="17.0" />
             </font>
         </Button>
-        <Text fx:id="lblVendedor" layoutX="269.0" layoutY="363.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendedor" textAlignment="CENTER" wrappingWidth="105.0">
+        <Text fx:id="lblVendedor" layoutX="399.0" layoutY="327.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendedor" textAlignment="CENTER" wrappingWidth="105.0">
             <font>
                 <Font name="Corbel" size="24.0" />
             </font>
         </Text>
-        <ComboBox fx:id="comboVendedor" layoutX="451.0" layoutY="336.0" prefHeight="43.0" prefWidth="180.0" />
-        <Button fx:id="btnRegistrarCualqVend" layoutX="446.0" layoutY="451.0" prefHeight="43.0" prefWidth="190.0" text="Cualquier Vendedor">
+        <ComboBox fx:id="comboVendedor" layoutX="581.0" layoutY="300.0" prefHeight="43.0" prefWidth="180.0" />
+        <Button fx:id="btnRegistrarCualqVend" layoutX="576.0" layoutY="415.0" prefHeight="43.0" prefWidth="190.0" text="Cualquier Vendedor">
             <font>
                 <Font size="17.0" />
             </font>

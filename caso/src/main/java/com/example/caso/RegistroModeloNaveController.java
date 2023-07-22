@@ -28,4 +28,12 @@ public class RegistroModeloNaveController {
         currentStage.setScene(newPageScene);
         currentStage.show();
     }
+    @FXML
+    protected void backMenu(ActionEvent event) throws IOException {
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuCliente-view.fxml"));
+        Scene newPageScene = new Scene(newPageParent);
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.setScene(newPageScene);
+        currentStage.show();
+    }
 }

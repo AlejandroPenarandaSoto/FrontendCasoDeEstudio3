@@ -37,6 +37,10 @@ public class InventarioVendedorController {
     private TableColumn<Repuesto,Integer> precioCol;
     @FXML
     private TableColumn<Repuesto,Integer> marcaCol;
+    @FXML
+    private TableColumn<Repuesto,Integer> annioCol1;
+    @FXML
+    private TableColumn<Repuesto,Integer> cantidadCol2;
 
 
     public void initialize() {
@@ -45,9 +49,10 @@ public class InventarioVendedorController {
         nombrerCol.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         descCol.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
         categoriaCol.setCellValueFactory(new PropertyValueFactory<>("Categoria"));
-        precioCol.setCellValueFactory(new PropertyValueFactory<>("precio"));
+        precioCol.setCellValueFactory(new PropertyValueFactory<>("Precio"));
         marcaCol.setCellValueFactory(new PropertyValueFactory<>("marcaR"));
-        
+        annioCol1.setCellValueFactory(new PropertyValueFactory<>("Annio"));
+        cantidadCol2.setCellValueFactory(new PropertyValueFactory<>("cantidad"));
         RepuestoDAO repuestoDAO = new RepuestoDAO();
         List<Repuesto> repuestoList = repuestoDAO.getRepuesto();
         tablaInventarioVendedor.setItems(FXCollections.observableArrayList(repuestoList));
@@ -57,15 +62,11 @@ public class InventarioVendedorController {
 
     @FXML
     protected void onPressbtnMenuCliente(ActionEvent event) throws IOException {
-
         Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuCliente-view.fxml"));
         Scene newPageScene = new Scene(newPageParent);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.setScene(newPageScene);
         currentStage.show();
-
-
-
 
     }
 

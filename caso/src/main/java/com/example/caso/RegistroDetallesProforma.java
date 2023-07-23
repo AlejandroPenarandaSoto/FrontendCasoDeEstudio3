@@ -1,5 +1,6 @@
 package com.example.caso;
 
+import casoestudio.Gestores.Gestor;
 import casoestudio.objetos.*;
 import com.google.gson.Gson;
 import javafx.event.ActionEvent;
@@ -31,10 +32,10 @@ public class RegistroDetallesProforma implements Initializable {
 
 
     @FXML
-    private TableColumn<?, ?> anioCol;
+    private TableColumn<Repuesto, Integer> anioCol;
 
     @FXML
-    private TableColumn<?, ?> categoriaCol;
+    private TableColumn<Repuesto, String> categoriaCol;
 
     @FXML
     private TableColumn<?, ?> descCol;
@@ -56,7 +57,7 @@ public class RegistroDetallesProforma implements Initializable {
 
 
     @FXML
-    private TableView<?> tablaInventarioVendedor;
+    private TableView<Repuesto> tablaInventarioVendedor;
 
     @FXML
     private TableColumn<?, ?> tipoCol;
@@ -65,6 +66,7 @@ public class RegistroDetallesProforma implements Initializable {
     private RechazoDAO rechazoDAO;
 
     private RepuestoDAO repuestoDAO;
+    private Gestor appGestor = new Gestor();
 
 
     @FXML
@@ -95,7 +97,7 @@ public class RegistroDetallesProforma implements Initializable {
 
         List<Repuesto> repuestos = repuestoDAO.getRepuesto();
         for (Repuesto repuesto : repuestos) {
-            CmboRep.getItems().add(String.valueOf(repuesto.getNombre()));
+            CmboRep.getItems().add(String.valueOf(repuesto.getDescripcion()));
         }
         List<Proforma> proformas = proforma.getProformas() ;
         for (Proforma proforma : proformas) {

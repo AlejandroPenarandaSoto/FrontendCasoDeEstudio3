@@ -48,7 +48,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </ComboBox>
-      <Button fx:id="btnRechazo" layoutX="459.0" layoutY="817.0" mnemonicParsing="false" onAction="#Click" prefHeight="56.0" prefWidth="162.0" text="Registro de Rechazo" />
-      <Button fx:id="btnProformasV" layoutX="448.0" layoutY="717.0" mnemonicParsing="false" onAction="#CLICK" prefHeight="56.0" prefWidth="185.0" text="Proformas por vendedor" />
+      <Button fx:id="btnRechazo" layoutX="694.0" layoutY="611.0" mnemonicParsing="false" onAction="#Click" prefHeight="56.0" prefWidth="162.0" text="Registro de Rechazo" />
+      <Button fx:id="btnProformasV" layoutX="224.0" layoutY="611.0" mnemonicParsing="false" onAction="#CLICK" prefHeight="56.0" prefWidth="185.0" text="Proformas por vendedor" />
     </children>
 </AnchorPane>

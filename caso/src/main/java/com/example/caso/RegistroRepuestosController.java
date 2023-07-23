@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RegistroRepuestosController {
-
+//
     @FXML
     private ChoiceBox<String> tiporId;
     private int tipoSelecionadoID;

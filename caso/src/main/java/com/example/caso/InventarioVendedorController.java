@@ -47,6 +47,7 @@ public class InventarioVendedorController {
         categoriaCol.setCellValueFactory(new PropertyValueFactory<>("Categoria"));
         precioCol.setCellValueFactory(new PropertyValueFactory<>("precio"));
         marcaCol.setCellValueFactory(new PropertyValueFactory<>("marcaR"));
+        
         RepuestoDAO repuestoDAO = new RepuestoDAO();
         List<Repuesto> repuestoList = repuestoDAO.getRepuesto();
         tablaInventarioVendedor.setItems(FXCollections.observableArrayList(repuestoList));

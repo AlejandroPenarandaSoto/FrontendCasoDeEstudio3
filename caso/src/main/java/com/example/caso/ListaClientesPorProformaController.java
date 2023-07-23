@@ -78,11 +78,10 @@ public class ListaClientesPorProformaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-      //  List<String> usuarios = uDao.getClientes();
-       // comboClientes.getItems().addAll(usuarios);
+      List<String> usuarios = uDao.getUsuarios();
+      comboClientes.getItems().addAll(usuarios);
 
-       // List<String> usuarios = uDao.getClientes();
-      //  comboClientes.getItems().addAll(usuarios);
+
 
 
     }

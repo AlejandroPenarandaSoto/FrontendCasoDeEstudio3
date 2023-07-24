@@ -3,6 +3,7 @@ package com.example.caso;
 import casoestudio.Gestores.Gestor;
 import casoestudio.objetos.*;
 import com.google.gson.Gson;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -11,6 +12,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 import java.util.List;
@@ -32,20 +34,7 @@ public class RegistroDetallesProforma implements Initializable {
 
 
     @FXML
-    private TableColumn<Repuesto, Integer> anioCol;
-
-    @FXML
-    private TableColumn<Repuesto, String> categoriaCol;
-
-    @FXML
-    private TableColumn<?, ?> descCol;
-
-    @FXML
     private TextField estadoField;
-
-    @FXML
-    private TableColumn<?, ?> idCol;
-
     @FXML
     private Button ingDetalle;
 
@@ -56,11 +45,7 @@ public class RegistroDetallesProforma implements Initializable {
     private Button btnRechazo;
 
 
-    @FXML
-    private TableView<Repuesto> tablaInventarioVendedor;
 
-    @FXML
-    private TableColumn<?, ?> tipoCol;
     private ProformaDetalleDAO detalleDAO;
     private ProformaDAO proforma;
     private RechazoDAO rechazoDAO;
@@ -78,12 +63,43 @@ public class RegistroDetallesProforma implements Initializable {
     void Click(ActionEvent event) {
 
     }
-
+    @FXML
+    private TableView<Repuesto> tablaInventarioVendedor1;
+    @FXML
+    private TableColumn<Repuesto,Integer> tipoCol1;
+    @FXML
+    private TableColumn<Repuesto,String> nombrerCol1;
+    @FXML
+    private TableColumn<Repuesto,String> descCol1;
+    @FXML
+    private TableColumn<Repuesto,String> categoriaCol1;
+    @FXML
+    private TableColumn<Repuesto,Integer> precioCol1;
+    @FXML
+    private TableColumn<Repuesto,Integer> marcaCol1;
+    @FXML
+    private TableColumn<Repuesto,Integer> annioCol1;
+    @FXML
+    private TableColumn<Repuesto,Integer> cantidadCol2;
 
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        tipoCol1.setCellValueFactory(new PropertyValueFactory<>("tipoR"));
+        nombrerCol1.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        descCol1.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
+        categoriaCol1.setCellValueFactory(new PropertyValueFactory<>("Categoria"));
+        precioCol1.setCellValueFactory(new PropertyValueFactory<>("Precio"));
+        marcaCol1.setCellValueFactory(new PropertyValueFactory<>("marcaR"));
+        annioCol1.setCellValueFactory(new PropertyValueFactory<>("Annio"));
+        cantidadCol2.setCellValueFactory(new PropertyValueFactory<>("cantidad"));
+        RepuestoDAO repuestoDAO = new RepuestoDAO();
+        List<Repuesto> repuestoList = repuestoDAO.getRepuesto();
+        tablaInventarioVendedor1.setItems(FXCollections.observableArrayList(repuestoList));
+
+
         detalleDAO = new ProformaDetalleDAO();
         rechazoDAO = new RechazoDAO();
         repuestoDAO = new RepuestoDAO();
@@ -109,6 +125,8 @@ public class RegistroDetallesProforma implements Initializable {
         CmboProf.setOnAction(e -> slctProf = Integer.parseInt(CmboProf.getValue()));
         CmboRechz.setOnAction(e -> slctRechz = String.valueOf(CmboRechz.getValue()));
         CmboRep.setOnAction(e -> slctRep = String.valueOf(CmboRep.getValue()));
+
+
     }
     @FXML
     void click(ActionEvent event) {

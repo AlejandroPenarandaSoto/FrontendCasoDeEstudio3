@@ -49,8 +49,9 @@ public class RegistroDetallesProforma implements Initializable {
     private ProformaDetalleDAO detalleDAO;
     private ProformaDAO proforma;
     private RechazoDAO rechazoDAO;
-
     private RepuestoDAO repuestoDAO;
+
+
     private Gestor appGestor = new Gestor();
 
 
@@ -64,19 +65,19 @@ public class RegistroDetallesProforma implements Initializable {
 
     }
     @FXML
-    private TableView<Repuesto> tablaInventarioVendedor1;
+    private TableView<Repuesto> tablaInventarioVendedor;
     @FXML
-    private TableColumn<Repuesto,Integer> tipoCol1;
+    private TableColumn<Repuesto,Integer> tipoCol;
     @FXML
-    private TableColumn<Repuesto,String> nombrerCol1;
+    private TableColumn<Repuesto,String> nombrerCol;
     @FXML
-    private TableColumn<Repuesto,String> descCol1;
+    private TableColumn<Repuesto,String> descCol;
     @FXML
-    private TableColumn<Repuesto,String> categoriaCol1;
+    private TableColumn<Repuesto,String> categoriaCol;
     @FXML
-    private TableColumn<Repuesto,Integer> precioCol1;
+    private TableColumn<Repuesto,Integer> precioCol;
     @FXML
-    private TableColumn<Repuesto,Integer> marcaCol1;
+    private TableColumn<Repuesto,Integer> marcaCol;
     @FXML
     private TableColumn<Repuesto,Integer> annioCol1;
     @FXML
@@ -86,24 +87,26 @@ public class RegistroDetallesProforma implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        tipoCol1.setCellValueFactory(new PropertyValueFactory<>("tipoR"));
-        nombrerCol1.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-        descCol1.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
-        categoriaCol1.setCellValueFactory(new PropertyValueFactory<>("Categoria"));
-        precioCol1.setCellValueFactory(new PropertyValueFactory<>("Precio"));
-        marcaCol1.setCellValueFactory(new PropertyValueFactory<>("marcaR"));
-        annioCol1.setCellValueFactory(new PropertyValueFactory<>("Annio"));
-        cantidadCol2.setCellValueFactory(new PropertyValueFactory<>("cantidad"));
-        RepuestoDAO repuestoDAO = new RepuestoDAO();
-        List<Repuesto> repuestoList = repuestoDAO.getRepuesto();
-        tablaInventarioVendedor1.setItems(FXCollections.observableArrayList(repuestoList));
-
-
         detalleDAO = new ProformaDetalleDAO();
         rechazoDAO = new RechazoDAO();
         repuestoDAO = new RepuestoDAO();
         proforma = new ProformaDAO();
+
+        tipoCol.setCellValueFactory(new PropertyValueFactory<>("tipoR"));
+        nombrerCol.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        descCol.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
+        categoriaCol.setCellValueFactory(new PropertyValueFactory<>("Categoria"));
+        precioCol.setCellValueFactory(new PropertyValueFactory<>("Precio"));
+        marcaCol.setCellValueFactory(new PropertyValueFactory<>("marcaR"));
+        annioCol1.setCellValueFactory(new PropertyValueFactory<>("Annio"));
+        cantidadCol2.setCellValueFactory(new PropertyValueFactory<>("cantidad"));
+
+        RepuestoDAO repuestoDAO = new RepuestoDAO();
+        List<Repuesto> repuestoList = repuestoDAO.getRepuesto();
+        tablaInventarioVendedor.setItems(FXCollections.observableArrayList(repuestoList));
+
+
+
 
         List<Rechazo> razonesRechazo = rechazoDAO.getRazonesRechazo();
         for (Rechazo razon : razonesRechazo) {
@@ -134,10 +137,11 @@ public class RegistroDetallesProforma implements Initializable {
         int repuestoId = repuestoDAO.getRepuestoId(CmboRep.getValue());
         String estado = estadoField.getText();
         int rechazoId = rechazoDAO.getRechazoId(CmboRechz.getValue());
-        int detalleId = 0;
+
+        appGestor.registrarDetalleProf(proformaId, repuestoId, estado, rechazoId);
 
         // Crear el objeto DetalleProforma
-        DetalleProforma detalleProforma = new DetalleProforma(proformaId, repuestoId, estado, rechazoId, detalleId);
+        DetalleProforma detalleProforma = new DetalleProforma(proformaId, repuestoId, estado, rechazoId);
 
         // Generar el JSON del objeto DetalleProforma usando la librería Gson
         Gson gson = new Gson();

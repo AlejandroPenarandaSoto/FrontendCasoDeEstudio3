@@ -37,18 +37,16 @@
       </ComboBox>
       <Button fx:id="btnRechazo" layoutX="694.0" layoutY="611.0" mnemonicParsing="false" onAction="#Click" prefHeight="56.0" prefWidth="162.0" text="Registro de Rechazo" />
       <Button fx:id="btnProformasV" layoutX="224.0" layoutY="611.0" mnemonicParsing="false" onAction="#CLICK" prefHeight="56.0" prefWidth="185.0" text="Proformas por vendedor" />
-
-      <TableView fx:id="tablaInventarioCliente1" layoutX="182.0" layoutY="139.0" prefHeight="274.0" prefWidth="775.0">
+      <TableView fx:id="tablaInventarioVendedor" layoutX="208.0" layoutY="137.0" prefHeight="274.0" prefWidth="678.0">
          <columns>
-            <TableColumn fx:id="tipoCol1" prefWidth="68.0" text="tipo" />
-            <TableColumn fx:id="nombrerCol1" prefWidth="90.0" text="nombre" />
-            <TableColumn fx:id="descCol1" prefWidth="110.0" text="descripcion" />
-            <TableColumn fx:id="idCol1" minWidth="0.0" prefWidth="48.0" text="id" />
-            <TableColumn fx:id="categoriaCol1" prefWidth="109.0" text="Categoria" />
-            <TableColumn fx:id="marcaCol1" prefWidth="68.0" text="Marca" />
-            <TableColumn fx:id="modeloCol1" prefWidth="68.0" text="Modelo" />
-            <TableColumn fx:id="precioCol1" prefWidth="68.0" text="Precio" />
-            <TableColumn fx:id="anioCol1" prefWidth="68.0" text="anio" />
+            <TableColumn fx:id="tipoCol" prefWidth="68.0" text="tipo" />
+            <TableColumn fx:id="nombrerCol" prefWidth="90.0" text="nombre" />
+            <TableColumn fx:id="descCol" prefWidth="110.0" text="descripcion" />
+            <TableColumn fx:id="categoriaCol" prefWidth="109.0" text="Categoria" />
+            <TableColumn fx:id="precioCol" prefWidth="68.0" text="Precio" />
+            <TableColumn fx:id="marcaCol" prefWidth="68.0" text="Marca" />
+            <TableColumn fx:id="annioCol1" prefWidth="68.0" text="Annio" />
+            <TableColumn fx:id="cantidadCol2" prefWidth="68.0" text="Cantidad" />
          </columns>
       </TableView>
     </children>

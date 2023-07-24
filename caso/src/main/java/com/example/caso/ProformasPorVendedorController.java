@@ -79,7 +79,7 @@ public class ProformasPorVendedorController {
     }
     @FXML
     protected void detalles(ActionEvent event) throws IOException {
-        Parent newPageParent = FXMLLoader.load(getClass().getResource("RegistroDetallesProforma.fxml"));
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("RegistroDetallesProforma-view.fxml"));
         Scene newPageScene = new Scene(newPageParent);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.setScene(newPageScene);

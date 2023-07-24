@@ -58,7 +58,7 @@ public class RegistroRechazosController{
 
     @FXML
     protected void IrRegistroDetalles(ActionEvent event) throws IOException {
-        Parent newPageParent = FXMLLoader.load(getClass().getResource("RegistroDetallesProforma-view.fxml"));
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("RegistroDetallesProformaController-view.fxml"));
         Scene newPageScene = new Scene(newPageParent);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.setScene(newPageScene);

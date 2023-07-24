@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="945.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistroDetallesProforma">
+<AnchorPane prefHeight="945.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistroDetallesProformaController">
     <children>
         <Text layoutX="119.0" layoutY="82.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Detalles de Proforma" textAlignment="CENTER" wrappingWidth="882.0">
             <font>

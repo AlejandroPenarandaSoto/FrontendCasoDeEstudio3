@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.MenuClienteController">
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.MenuClienteController">
 
     <Text fx:id="txtCliente" layoutX="387.0" layoutY="89.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Vista Cliente" textAlignment="CENTER" wrappingWidth="507.0">
         <font>
@@ -46,15 +46,8 @@
     </AnchorPane>
    <AnchorPane layoutX="796.0" layoutY="186.0" prefHeight="226.0" prefWidth="328.0">
       <children>
-         <VBox layoutX="14.0" layoutY="13.0" prefHeight="200.0" prefWidth="219.0">
-            <children>
-               <Button fx:id="btnInVendedor" mnemonicParsing="false" onAction="#onPressbtnInventarioV" prefHeight="55.0" prefWidth="176.0" text="Inventario Vendedor">
-                  <VBox.margin>
-                     <Insets left="85.0" top="100.0" />
-                  </VBox.margin>
-               </Button>
-            </children>
-         </VBox>
+         <Button fx:id="btnInVendedor1" layoutX="90.0" layoutY="14.0" mnemonicParsing="false" onAction="#onPressbtnInventarioV" prefHeight="50.0" prefWidth="134.0" text="Inventario Vendedor" />
+         <Button fx:id="btnInVendedor" layoutX="90.0" layoutY="163.0" mnemonicParsing="false" onAction="#onPressbtnConsultaProformas" prefHeight="49.0" prefWidth="134.0" text="Consultar Proformas" />
       </children>
    </AnchorPane>
 

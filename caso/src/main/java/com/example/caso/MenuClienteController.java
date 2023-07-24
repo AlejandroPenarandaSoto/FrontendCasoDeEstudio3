@@ -78,4 +78,14 @@ public class MenuClienteController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
+    @FXML
+    protected void onPressbtnConsultaProformas(ActionEvent event) throws IOException{
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("ConsultaDeProformasPorCliente-view.fxml"));
+        Scene newPageScene = new Scene(newPageParent);
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.setScene(newPageScene);
+        currentStage.show();
+    }
+
 }

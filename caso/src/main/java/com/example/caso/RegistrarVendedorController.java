@@ -77,4 +77,13 @@ public class RegistrarVendedorController implements Initializable {
         listarRoles();
 
     }
+
+    @FXML
+    protected void onBtnMenu(ActionEvent event) throws IOException {
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("Main-view.fxml"));
+        Scene newPageScene = new Scene(newPageParent);
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.setScene(newPageScene);
+        currentStage.show();
+    }
 }

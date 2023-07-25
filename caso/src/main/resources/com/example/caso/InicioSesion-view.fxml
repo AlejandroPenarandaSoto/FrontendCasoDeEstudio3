@@ -23,7 +23,7 @@
                <Font size="17.0" />
            </font>
        </Button>
-      <Button fx:id="btnMenu" layoutX="696.0" layoutY="419.0" prefHeight="43.0" prefWidth="252.0" text="Regresar al menú">
+      <Button fx:id="btnMenu" layoutX="696.0" layoutY="419.0" onAction="#onBtnMenu" prefHeight="43.0" prefWidth="252.0" text="Regresar al menú">
          <font>
             <Font size="17.0" />
          </font>

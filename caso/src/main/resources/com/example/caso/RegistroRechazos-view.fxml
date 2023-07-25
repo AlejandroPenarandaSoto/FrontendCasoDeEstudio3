@@ -37,5 +37,10 @@
                 <TableColumn fx:id="descripcionCol" prefWidth="261.0" text="Descripcion" />
             </columns>
         </TableView>
+        <Button fx:id="btnDetalles" layoutX="546.0" layoutY="718.0" onAction="#irRegistroDetalles" prefHeight="43.0" prefWidth="190.0" text="Registro Detalles">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
     </children>
 </AnchorPane>

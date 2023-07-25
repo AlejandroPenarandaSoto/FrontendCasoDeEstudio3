@@ -27,7 +27,7 @@ public class MenuClienteController implements Initializable {
 
     @FXML
     protected void onPressbtnRegistroNave(ActionEvent event) throws IOException{
-        Parent newPageParent = FXMLLoader.load(getClass().getResource("RegistroNave-view.fxml"));
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("RegistroCategoriaNave-view.fxml"));
         Scene newPageScene = new Scene(newPageParent);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.setScene(newPageScene);
@@ -57,7 +57,7 @@ public class MenuClienteController implements Initializable {
 
     @FXML
     protected void onPressbtnProforma(ActionEvent event) throws IOException{
-        Parent newPageParent = FXMLLoader.load(getClass().getResource("ListaProformasPorVendedor-view.fxml"));
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("RegistroProforma-view.fxml"));
         Scene newPageScene = new Scene(newPageParent);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.setScene(newPageScene);

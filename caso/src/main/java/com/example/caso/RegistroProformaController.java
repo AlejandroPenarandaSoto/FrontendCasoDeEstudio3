@@ -62,6 +62,10 @@ public class RegistroProformaController implements Initializable {
 
         comboCliente.getSelectionModel().clearSelection();
         comboVendedor.getSelectionModel().clearSelection();
+    }
+
+    @FXML
+    protected void onBtnMenu(ActionEvent event) throws IOException{
         Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuCliente-view.fxml"));
         Scene newPageScene = new Scene(newPageParent);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -63,7 +63,6 @@ public class RegistroRepuestosController {
         categId.setValue("");
         categId.setOnAction(event -> {
             categoriaSelecionada = (String) categId.getValue();
-            System.out.println("Seleccionado: " + categoriaSelecionada);
         });
         MarcaId.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
@@ -86,6 +85,8 @@ public class RegistroRepuestosController {
         appGestor.registrarRepuesto(tipoSelecionadoID,nombre,descripcion,categoriaSelecionada,precio, idMarcaRe,annio,cantidad);
         initialize();
     }
+
+    @FXML
     protected void regresarMenu(ActionEvent event) throws IOException {
         Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuVendedor-view.fxml"));
         Scene newPageScene = new Scene(newPageParent);

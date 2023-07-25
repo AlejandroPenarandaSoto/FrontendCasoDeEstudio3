@@ -82,7 +82,7 @@
                         <Insets left="10.0" top="40.0" />
                      </HBox.margin>
                   </Button>
-                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="79.0" text="Menú">
+                  <Button layoutX="10.0" layoutY="10.0" onAction="#regresarMenu" mnemonicParsing="false" prefHeight="38.0" prefWidth="79.0" text="Menú">
                      <HBox.margin>
                         <Insets left="300.0" top="40.0" />
                      </HBox.margin>

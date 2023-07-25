@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="725.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.ConsultarNaveUsuarioController">
+<AnchorPane prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.ConsultarNaveUsuarioController">
    <children>
-      <Button fx:id="btnmenu" layoutX="434.0" layoutY="580.0" onAction="#onBtnMenu" prefHeight="43.0" prefWidth="252.0" text="menu">
+      <Button fx:id="btnmenu" layoutX="436.0" layoutY="712.0" onAction="#onBtnMenu" prefHeight="43.0" prefWidth="252.0" text="menu">
          <font>
             <Font size="17.0" />
          </font>

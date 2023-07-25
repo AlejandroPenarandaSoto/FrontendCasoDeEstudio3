@@ -14,8 +14,8 @@
     </Text>
    <AnchorPane layoutX="347.0" layoutY="239.0" prefHeight="188.0" prefWidth="587.0">
       <children>
-         <Button layoutX="14.0" layoutY="67.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="186.0" text="Registrarse" />
-         <Button layoutX="387.0" layoutY="67.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="186.0" text="Inicio Sesión" />
+         <Button layoutX="14.0" layoutY="67.0" onAction="#onBtnRegistrar" mnemonicParsing="false" prefHeight="55.0" prefWidth="186.0" text="Registrarse" />
+         <Button layoutX="387.0" layoutY="67.0" onAction="#onBtnIniciarSesion" mnemonicParsing="false" prefHeight="55.0" prefWidth="186.0" text="Inicio Sesión" />
       </children>
    </AnchorPane>
 

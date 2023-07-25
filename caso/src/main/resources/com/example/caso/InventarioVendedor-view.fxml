@@ -7,19 +7,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="725.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.InventarioVendedorController">
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.InventarioVendedorController">
     <children>
-        <Button fx:id="btnmenu" layoutX="434.0" layoutY="437.0" onAction="#onPressbtnMenuCliente" prefHeight="43.0" prefWidth="252.0" text="menu">
+        <Button fx:id="btnmenu" layoutX="528.0" layoutY="433.0" onAction="#onPressbtnMenuCliente" prefHeight="43.0" prefWidth="252.0" text="menu">
             <font>
                 <Font size="17.0" />
             </font>
         </Button>
-        <Text layoutX="192.0" layoutY="80.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventario Vendedor" textAlignment="CENTER" wrappingWidth="735.287109375">
+        <Text layoutX="301.0" layoutY="67.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventario Vendedor" textAlignment="CENTER" wrappingWidth="678.0">
             <font>
                 <Font name="Corbel Bold" size="56.0" />
             </font>
         </Text>
-        <TableView fx:id="tablaInventarioVendedor" layoutX="198.0" layoutY="127.0" prefHeight="274.0" prefWidth="678.0">
+        <TableView fx:id="tablaInventarioVendedor" layoutX="292.0" layoutY="123.0" prefHeight="274.0" prefWidth="678.0">
             <columns>
                 <TableColumn fx:id="tipoCol" prefWidth="68.0" text="tipo" />
                 <TableColumn fx:id="nombrerCol" prefWidth="90.0" text="nombre" />

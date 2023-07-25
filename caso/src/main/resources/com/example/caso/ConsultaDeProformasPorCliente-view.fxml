@@ -55,7 +55,6 @@
         </Button>
         <TableView fx:id="tblDetalleProforma" layoutX="385.0" layoutY="516.0" prefHeight="270.0" prefWidth="512.0">
             <columns>
-                <TableColumn fx:id="idDetalleCol" prefWidth="89.0" text="ID Detalle" />
                 <TableColumn fx:id="idProformaCol" prefWidth="98.0" text="ID Proforma" />
                 <TableColumn fx:id="idRepuestoCol" prefWidth="100.0" text="ID Repuesto" />
                 <TableColumn fx:id="estadoCol" prefWidth="100.0" text="Estado" />

@@ -12,9 +12,9 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
 
 
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("RegistroDetallesProforma-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ConsultarNaveUsuario.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 800);
-        stage.setTitle("Hello!");
+        stage.setTitle("Cenfoamazon");
         stage.setScene(scene);
         stage.show();
     }

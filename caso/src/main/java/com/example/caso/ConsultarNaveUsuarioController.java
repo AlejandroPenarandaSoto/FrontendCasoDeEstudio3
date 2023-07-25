@@ -5,7 +5,9 @@ import casoestudio.Composite.GrupoComponente;
 import casoestudio.Gestores.Gestor;
 import casoestudio.objetos.Categoria;
 import casoestudio.objetos.Nave;
+import casoestudio.objetos.NaveDAO;
 import casoestudio.objetos.Repuesto;
+import casoestudio.producto_Concreto._UsuarioDAO;
 import casoestudio.producto_Concreto._Usuarios;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -30,6 +32,12 @@ public class ConsultarNaveUsuarioController {
 
     @FXML
     private TextField txtUser;
+
+    @FXML
+    private TableView<Nave> tablaInventarioCliente;
+    @FXML
+    private TableColumn<Nave,Integer> idNaveCol;
+    private String userName;
     @FXML
     private TableView<GrupoComponente> tablaINaveUsuario;
     @FXML
@@ -43,7 +51,14 @@ public class ConsultarNaveUsuarioController {
     private TextArea textResul;
     Gestor appGestor = new Gestor();
 
+    _UsuarioDAO usuarioDAO = new _UsuarioDAO();
+
     private List<GrupoComponente> grupos = new ArrayList<>();
+
+    public void initialize() {
+
+    }
+
     @FXML
     protected void onBtnConsultar(ActionEvent event) throws IOException {
         String naver = txtUser.getText();
@@ -60,7 +75,6 @@ public class ConsultarNaveUsuarioController {
         grupo.agregar(nave);
         grupo.agregar(usuario);
         grupo.agregar(categoria1);
-        System.out.println(grupo.getDescripcion());
         textResul.setText(grupo.getDescripcion());
 
 

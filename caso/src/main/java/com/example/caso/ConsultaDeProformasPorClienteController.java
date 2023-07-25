@@ -35,8 +35,6 @@ public class ConsultaDeProformasPorClienteController {
     @FXML
     private TableView<DetalleProforma> tblDetalleProforma;
     @FXML
-    private TableColumn<DetalleProforma, Integer> idDetalleCol;
-    @FXML
     private TableColumn<DetalleProforma, Integer> idProformaCol;
     @FXML
     private TableColumn<DetalleProforma, Integer> idRepuestoCol;
@@ -90,7 +88,6 @@ public class ConsultaDeProformasPorClienteController {
         int idProforma = Integer.parseInt(fldIdProforma.getText());
         appGestor.getDetalleProformaByProformaId(idProforma);
         fldContrasenna.clear();
-        idDetalleCol.setCellValueFactory(new PropertyValueFactory<>("id_detalle"));
         idProformaCol.setCellValueFactory(new PropertyValueFactory<>("id_proforma"));
         idRepuestoCol.setCellValueFactory(new PropertyValueFactory<>("id_repuesto"));
         estadoCol.setCellValueFactory(new PropertyValueFactory<>("estado"));
@@ -102,7 +99,7 @@ public class ConsultaDeProformasPorClienteController {
 
     @FXML
     protected void backMenu(ActionEvent event) throws IOException {
-        Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuVendedor-view.fxml"));
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("MenuCliente-view.fxml"));
         Scene newPageScene = new Scene(newPageParent);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.setScene(newPageScene);

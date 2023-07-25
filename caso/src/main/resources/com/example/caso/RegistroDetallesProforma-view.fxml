@@ -10,34 +10,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="945.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistroDetallesProformaController">
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caso.RegistroDetallesProformaController">
     <children>
-        <Text layoutX="119.0" layoutY="82.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Detalles de Proforma" textAlignment="CENTER" wrappingWidth="882.0">
+        <Text layoutX="233.0" layoutY="85.0" stroke="#bfd202" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Detalles de Proforma" textAlignment="CENTER" wrappingWidth="882.0">
             <font>
                 <Font name="Corbel Bold" size="56.0" />
             </font>
         </Text>
-      <ComboBox id="1" fx:id="CmboRep" layoutX="16.0" layoutY="459.0" prefHeight="56.0" prefWidth="245.0" promptText="Repuestos">
+      <ComboBox id="1" fx:id="CmboRep" layoutX="130.0" layoutY="462.0" prefHeight="56.0" prefWidth="245.0" promptText="Repuestos">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </ComboBox>
-      <ComboBox id="2" fx:id="CmboProf" layoutX="339.0" layoutY="459.0" prefHeight="56.0" prefWidth="177.0" promptText="Proformas">
+      <ComboBox id="2" fx:id="CmboProf" layoutX="453.0" layoutY="462.0" prefHeight="56.0" prefWidth="177.0" promptText="Proformas">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </ComboBox>
-      <Text layoutX="560.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado" wrappingWidth="93.13671875" />
-      <TextField fx:id="estadoField" layoutX="613.0" layoutY="465.0" prefHeight="45.0" prefWidth="162.0" />
-      <Button fx:id="ingDetalle" layoutX="480.0" layoutY="611.0" mnemonicParsing="false" onAction="#click" prefHeight="56.0" prefWidth="121.0" text="Ingresar Detalle" />
-      <ComboBox id="2" fx:id="CmboRechz" layoutX="820.0" layoutY="460.0" prefHeight="56.0" prefWidth="177.0" promptText="Rechazos">
+      <Text layoutX="674.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado" wrappingWidth="93.13671875" />
+      <TextField fx:id="estadoField" layoutX="727.0" layoutY="468.0" prefHeight="45.0" prefWidth="162.0" />
+      <Button fx:id="ingDetalle" layoutX="594.0" layoutY="614.0" mnemonicParsing="false" onAction="#click" prefHeight="56.0" prefWidth="121.0" text="Ingresar Detalle" />
+      <ComboBox id="2" fx:id="CmboRechz" layoutX="934.0" layoutY="463.0" prefHeight="56.0" prefWidth="177.0" promptText="Rechazos">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </ComboBox>
-      <Button fx:id="btnRechazo" layoutX="694.0" layoutY="611.0" mnemonicParsing="false" onAction="#Click" prefHeight="56.0" prefWidth="162.0" text="Registro de Rechazo" />
-      <Button fx:id="btnProformasV" layoutX="224.0" layoutY="611.0" mnemonicParsing="false" onAction="#CLICK" prefHeight="56.0" prefWidth="185.0" text="Proformas por vendedor" />
-      <TableView fx:id="tablaInventarioVendedor" layoutX="208.0" layoutY="137.0" prefHeight="274.0" prefWidth="678.0">
+      <Button fx:id="btnRechazo" layoutX="808.0" layoutY="614.0" mnemonicParsing="false" onAction="#Click" prefHeight="56.0" prefWidth="162.0" text="Registro de Rechazo" />
+      <Button fx:id="btnProformasV" layoutX="338.0" layoutY="614.0" mnemonicParsing="false" onAction="#CLICK" prefHeight="56.0" prefWidth="185.0" text="Proformas por vendedor" />
+      <TableView fx:id="tablaInventarioVendedor" layoutX="322.0" layoutY="140.0" prefHeight="274.0" prefWidth="678.0">
          <columns>
             <TableColumn fx:id="tipoCol" prefWidth="68.0" text="tipo" />
             <TableColumn fx:id="nombrerCol" prefWidth="90.0" text="nombre" />

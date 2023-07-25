@@ -16,7 +16,7 @@ public class MenuVendedorController {
 
     @FXML
     protected void onPressbtnRegistroRepuesto(ActionEvent event) throws IOException {
-        Parent newPageParent = FXMLLoader.load(getClass().getResource("RegistroNave-view.fxml"));
+        Parent newPageParent = FXMLLoader.load(getClass().getResource("RegistroRepuestos-view.fxml"));
         Scene newPageScene = new Scene(newPageParent);
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.setScene(newPageScene);

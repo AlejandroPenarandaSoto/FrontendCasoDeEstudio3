@@ -1,7 +1,10 @@
 package com.example.caso;
 
 import casoestudio.Gestores.Gestor;
+import casoestudio.IObservador.ObservadorProforma;
 import casoestudio.objetos.*;
+import casoestudio.producto_Concreto._UsuarioDAO;
+import casoestudio.producto_Concreto._Usuarios;
 import com.google.gson.Gson;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -11,11 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -24,7 +23,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class RegistroDetallesProformaController implements Initializable {
+public class RegistroDetallesProformaController implements Initializable, ObservadorProforma {
 
     @FXML
     private ComboBox<String> CmboProf;
@@ -53,7 +52,7 @@ public class RegistroDetallesProformaController implements Initializable {
 
 
     private ProformaDetalleDAO detalleDAO;
-    private ProformaDAO proforma;
+    private ProformaDAO proformaDAO;
     private RechazoDAO rechazoDAO;
     private RepuestoDAO repuestoDAO;
 
@@ -98,15 +97,17 @@ public class RegistroDetallesProformaController implements Initializable {
     @FXML
     private TableColumn<Repuesto,Integer> cantidadCol2;
 
+    private Proforma proforma;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        proforma = new Proforma();
         detalleDAO = new ProformaDetalleDAO();
         rechazoDAO = new RechazoDAO();
         repuestoDAO = new RepuestoDAO();
-        proforma = new ProformaDAO();
-
+        proformaDAO = new ProformaDAO();
+        proforma.registrarObservador(this);
         tipoCol.setCellValueFactory(new PropertyValueFactory<>("tipoR"));
         nombrerCol.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         descCol.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
@@ -133,7 +134,7 @@ public class RegistroDetallesProformaController implements Initializable {
         for (Repuesto repuesto : repuestos) {
             CmboRep.getItems().add(String.valueOf(repuesto.getDescripcion()));
         }
-        List<Proforma> proformas = proforma.getProformas() ;
+        List<Proforma> proformas = proformaDAO.getProformas() ;
         for (Proforma proforma : proformas) {
             CmboProf.getItems().add(String.valueOf(proforma.getId_Proforma()));
         }
@@ -153,11 +154,21 @@ public class RegistroDetallesProformaController implements Initializable {
         String estado = estadoField.getText();
         int rechazoId = rechazoDAO.getRechazoId(CmboRechz.getValue());
 
-        appGestor.registrarDetalleProf(proformaId, repuestoId, estado, rechazoId);
-
+        DetalleProforma detalleProforma = new DetalleProforma(proformaId, repuestoId, estado, rechazoId);
+        ProformaDetalleDAO detalleDAO = new ProformaDetalleDAO();
+        detalleDAO.insertarDetalleProforma(detalleProforma);
+        proforma.notificarNuevosDetalles(detalleProforma);
 
 
 
     }
 
+    @Override
+    public void notificarNuevosDetalles(Proforma proforma, DetalleProforma detalleProforma) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Nuevo Detalle de Proforma Agregado");
+        alert.setHeaderText("Nuevo Detalle de Proforma Agregado");
+        alert.setContentText("Se ha agregado un nuevo detalle de proforma con ID: " + detalleProforma.getId_proforma());
+        alert.showAndWait();
+    }
 }

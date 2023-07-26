@@ -24,7 +24,7 @@ public class InicioSesionController {
 
 
     private Gestor appGestor = new Gestor();
-    private InventarioClienteController invetarioC = new InventarioClienteController();
+    //private InventarioClienteController invetarioC = new InventarioClienteController();
     private MenuClienteController menuClienteController = new MenuClienteController();
 
     @FXML

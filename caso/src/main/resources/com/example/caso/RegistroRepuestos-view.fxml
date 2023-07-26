@@ -64,11 +64,11 @@
                         <Insets left="20.0" />
                      </GridPane.margin>
                   </Label>
-                  <ChoiceBox fx:id="categId" prefWidth="150.0" GridPane.columnIndex="3" />
                   <ChoiceBox fx:id="MarcaId" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                   <TextField fx:id="preciId" prefHeight="25.0" prefWidth="201.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                   <TextField fx:id="cantId" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                   <ChoiceBox fx:id="tiporId" prefWidth="150.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="categId" GridPane.columnIndex="3" />
                </children>
             </GridPane>
          </children>
@@ -77,12 +77,12 @@
          <children>
             <HBox layoutX="53.0" layoutY="3.0" prefHeight="100.0" prefWidth="436.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="99.0" text="Registrar"  onAction="#registrarRepuesto">
+                  <Button mnemonicParsing="false" onAction="#registrarRepuesto" prefHeight="37.0" prefWidth="86.0" text="Registrar">
                      <HBox.margin>
                         <Insets left="10.0" top="40.0" />
                      </HBox.margin>
                   </Button>
-                  <Button layoutX="10.0" layoutY="10.0" onAction="#regresarMenu" mnemonicParsing="false" prefHeight="38.0" prefWidth="79.0" text="Menú">
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#regresarMenu" prefHeight="38.0" prefWidth="79.0" text="Menú">
                      <HBox.margin>
                         <Insets left="300.0" top="40.0" />
                      </HBox.margin>
@@ -91,5 +91,6 @@
             </HBox>
          </children>
       </AnchorPane>
+      <Button layoutX="920.0" layoutY="211.0" mnemonicParsing="false" onAction="#registrarMarcaTipo" prefHeight="31.0" prefWidth="200.0" text="Registrar Marca o Tipo Repuesto" />
    </children>
 </AnchorPane>

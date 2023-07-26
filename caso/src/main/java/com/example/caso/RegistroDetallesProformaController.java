@@ -163,12 +163,12 @@ public class RegistroDetallesProformaController implements Initializable, Observ
 
     }
 
+
     @Override
     public void notificarNuevosDetalles(Proforma proforma, DetalleProforma detalleProforma) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Nuevo Detalle de Proforma Agregado");
-        alert.setHeaderText("Nuevo Detalle de Proforma Agregado");
-        alert.setContentText("Se ha agregado un nuevo detalle de proforma con ID: " + detalleProforma.getId_proforma());
-        alert.showAndWait();
-    }
+        alert.setTitle("Nuevo Detalle de Proforma");
+        alert.setHeaderText("Se ha agregado un nuevo detalle a la proforma #" + proforma.getId_Proforma());
+        alert.setContentText(detalleProforma.toString());
+        alert.showAndWait();    }
 }
